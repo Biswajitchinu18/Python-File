@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>eCommerce Product Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+  </style>
+</head>
+<body>
+  <h1>eCommerce Product Table (500 Items)</h1>
+  <table id="productTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Product Name</th>
+        <th>Category</th>
+        <th>Price ($)</th>
+        <th>Stock</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    const categories = ['Electronics', 'Clothing', 'Books', 'Home', 'Beauty', 'Sports'];
+    const statuses = ['In Stock', 'Out of Stock', 'Limited'];
+
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    const tbody = document.querySelector('#productTable tbody');
+
+    for (let i = 1; i <= 500; i++) {
+      const row = document.createElement('tr');
+
+      const id = i;
+      const name = `Product ${i}`;
+      const category = categories[getRandomInt(0, categories.length - 1)];
+      const price = (Math.random() * 1000).toFixed(2);
+      const stock = getRandomInt(0, 500);
+      const status = stock === 0 ? 'Out of Stock' : stock < 20 ? 'Limited' : 'In Stock';
+
+      row.innerHTML = `
+        <td>${id}</td>
+        <td>${name}</td>
+        <td>${category}</td>
+        <td>${price}</td>
+        <td>${stock}</td>
+        <td>${status}</td>
+      `;
+
+      tbody.appendChild(row);
+    }
+  </script>
+</body>
+</html>
