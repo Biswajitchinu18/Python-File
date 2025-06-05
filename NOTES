@@ -1,0 +1,58 @@
+#context manager is diff who take care the browser,driver,page,locator,elements,substance,frame,selectors,de selectors everything.
+#with statement is responsible to close the sync playwright function
+
+
+#selenium interview question
+-----------------------------
+#how to handel the window,iframe,popup,alert
+#how many type of weight mechanism ?
+
+#diff between the selenium and playwright
+-------------------------------------------
+In the case of selenium no need to use context and new page
+In the case of playwright before the navigation we need context and new page
+
+what is web driver ?
+--------------------
+It is a interface who open the search engine, access the search engine
+
+Soap
+----
+> soap following xml that's why soap have more validation point in each and every point
+> soap meet each and every check point when he meet the hitting point
+> driver .get is acessable by the soap api
+
+rest
+-----
+rest direct jump to the hitting point
+xpath follow the rest
+Goto function is acessable by the rest api
+
+#css selector ( cascading style sheet )
+-----------------------------------------
+css selector only support the two locators
+1.ID
+2.CLASS
+
+//-parent node
+/-child node
+@-fetching point
+
+why css selector is faster ?
+-------------------------------
+> Because of node xpath in the body tag searched every tag and attribute but
+ css selector goes to .css file and fetch their class and goto the locator so that the css selector is much more faster .
+
+Basic syntax
+------------
+tag name -input, div, span.
+#id
+.class_name
+attribute
+
+combined selector
+------------------
+div.classname
+with help of the tag
+
+css selector is static
