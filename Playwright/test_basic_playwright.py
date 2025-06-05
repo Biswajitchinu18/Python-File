@@ -15,5 +15,19 @@ with sync_playwright() as p:
     #browser = p.webkit.launch(headless=False)
 
     #opening a new context and page
+    context = browser.new_context()
+
+    #new Page
+    page = context.new_page()
+
+
 
     browser.close()
+
+
+
+
+
+
+
+
